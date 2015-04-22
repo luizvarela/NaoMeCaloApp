@@ -13,3 +13,11 @@ gem 'geocoder'
 gem 'gmaps4rails'
 
 gem 'spring',        group: :development
+
+group :test, :development do
+  gem 'rspec-rails','~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+end
