@@ -13,7 +13,10 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'bower-rails'
 
-gem 'spring',        group: :development
+group :development do
+  gem 'pry-rails'
+  gem 'spring'
+end
 
 group :test, :development do
   gem 'rspec-rails','~> 3.0'
