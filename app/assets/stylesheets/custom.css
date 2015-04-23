@@ -1,0 +1,226 @@
+.lblForm{
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#txtArea{
+  height: 180px;
+
+}
+
+.inpt{
+  margin-top: 4px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.navbar-inverse .navbar-brand {
+  color: #393040;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+background-color: #000;
+
+}
+
+.navbar-right{
+  margin-top: 4%;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #393040;
+  background-color: #fff;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: 180px;
+}
+
+.intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading {
+  padding: 150px 0px 0px 0px;
+}
+
+.descricaomapa {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: light;
+  text-align: center;
+}
+
+.navbar-inverse{
+  border-bottom: none;
+  background-color: #fff;
+  border-color: #fff;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse .nav li a{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #393040;
+  background-color: #fff;
+}
+
+.site-heading h1 {
+  color: #393040;
+}
+
+span.subheading {
+  color: #3c4759;
+}
+
+#registrar, #enviar{
+  background-color: #9955bb;
+  border: 1px solid #393040;
+  color: #fff;
+}
+
+#registrar:hover, #registrar:focus, #enviar:hover, #enviar:focus{
+  background-color: #bfb063;
+  border-color: #6d5187;
+}
+
+#btnGroup{
+  text-align: center;
+  width: 100%;
+}
+
+.intro-header .site-heading h1 {
+  font-size: 45px;
+}
+
+#enviar{
+  width: 25em;
+}
+
+.navbar-inverse .nav li a:hover, .navbar-inverse .nav li a:focus {
+  color: #75667f;
+}
+
+
+/* *********************************
+           Variables
+  ********************************** */
+/* *********************************
+   Some Style Overrides on Bootstrap
+  ********************************** */
+
+
+.navbar-inverse .navbar-toggle {
+  border: 1px solid #333;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: transparent;
+}
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background: #393040;
+  }
+}
+
+/* *********************************
+           Toolbar Logo
+  ********************************** */
+.small-logo-container {
+  padding-top: 50px;
+  margin-top: 15%;
+  height: 55px;
+  overflow: hidden;
+}
+
+.small-logo {
+  color: #393040;
+  font-size: 1.7em;
+  padding-bottom: 2px;
+  font-family: 'Montserrat';
+}
+
+/* *********************************
+           Big Logo
+  ********************************** */
+.big-logo-row {
+  background: white;
+}
+.big-logo-row .big-logo-container {
+  padding-top: 10px;
+}
+#big-logo {
+  height: 10em;
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+@media (min-width: 300px) {
+  #big-logo {
+    height: 5em;
+  }
+}
+@media (min-width: 440px) {
+  #big-logo {
+    height: 6em;
+  }
+}
+@media (min-width: 500px) {
+  #big-logo {
+    height: 7em;
+  }
+}
+@media (min-width: 630px) {
+  #big-logo {
+    height: 7.5em;
+  }
+}
+@media (min-width: 768px) {
+  #big-logo {
+    height: 8em;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  #big-logo {
+    height: 10em;
+  }
+}
+
+
+/* .intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading {
+  padding-bottom: 0px;
+  padding-top: 150px;
+}
+
+.navbar-brand {
+  float: left;
+  // height: 170px; 
+}
+
+.navbar-custom .navbar-brand {
+  padding: 0px 20px 20px 20px;
+}
+
+.navbar-right {
+  margin-top: 25px;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: 80px;
+  
+  .container-fluid {
+  padding-right: 40px;
+  padding-left: 95px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-custom .navbar-brand {
+  color: #393040;
+  padding: 20px;
+}
+
+
+.navbar-custom .nav li a{
+  color: #393040;
+  padding: 20px;
+  background-color: #fff;
+}
+
+} */

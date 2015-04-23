@@ -19,5 +19,7 @@ module NaoMeCaloApp
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
   
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff|woff2)$)
+
+    config.assets.precompile += %w( custom.css clean-blog.css)
   end
 end
