@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <title>Não me calo!</title>
-  <%= stylesheet_link_tag    'application', 'clean-blog', 'custom', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="icon" sizes="16x16" href="<%= image_path 'logo.png' %>">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+  <%= stylesheet_link_tag 'application', 'clean-blog', 'custom', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'dados', 'clean-blog', 'custom', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -14,5 +16,13 @@
   <%= yield %>
 
   <%= render 'layouts/footer' %>
+
+  <script type="text/javascript">
+    $( "#registrar" ).click(function() {
+      $('html, body').animate({
+        scrollTop: $("#facadenuncia").offset().top
+      }, 300);
+    });
+  </script>
 </body>
 </html>

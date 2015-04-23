@@ -21,5 +21,6 @@ module NaoMeCaloApp
     config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff|woff2)$)
 
     config.assets.precompile += %w( custom.css clean-blog.css)
+    config.assets.precompile += %w( custom.js clean-blog.js dados.js map.js)
   end
 end
