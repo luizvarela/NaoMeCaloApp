@@ -14,7 +14,6 @@ gem 'gmaps4rails'
 gem 'bower-rails'
 
 group :development do
-  gem 'pry-rails'
   gem 'spring'
 end
 
@@ -24,5 +23,6 @@ group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
   gem 'shoulda-matchers', require: false
 end
