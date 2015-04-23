@@ -1,14 +1,33 @@
-<div class="container-fluid">
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h1>Hello</h1>
-    </div>
-    <div class="panel-body">
-      <form class="form-inline">
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Enter your name">
+<header class="intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>Não se pode calar um assédio!</h1>
+          <br>
+          <button class="btn btn-default" id="registrar" type="submit">Faça sua denúncia</button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
-</div>
+</header>
+
+<p class="descricaomapa">Confira no mapa abaixo os acontecimentos registrados: </p>
+
+<%= render 'map' %>
+
+<header class="intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading" id="facadenuncia">
+            <h1>Faça sua denúncia</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<%= render 'delatation_form' %>
+
+<hr>
