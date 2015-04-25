@@ -1,0 +1,14 @@
+pt-BR:
+  activerecord:
+    models:
+      delatation:
+        one: 'Denúncia'
+        other: 'Denúncias'
+    attributes:
+      delatation:
+        category: 'Categoria'
+        name: 'Nome do Local'
+        address: 'Localização'
+        occurrence_date: 'Data'
+        shift: 'Turno'
+        description: 'Conte o que Aconteceu'
