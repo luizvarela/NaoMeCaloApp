@@ -15,6 +15,8 @@ Bundler.require(*Rails.groups)
 
 module NaoMeCaloApp
   class Application < Rails::Application
+    config.autoload_paths += Dir["#{config.root}/lib"]
+    
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
     config.assets.paths << Rails.root.join("vendor","assets","bower_components","bootstrap-sass-official","assets","fonts")
   

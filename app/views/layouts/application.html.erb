@@ -26,6 +26,24 @@
     });
   </script>
 
+  <script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({
+      provider: {
+        disableDefaultUI: true,
+        scrollwheel: false
+      },
+      internal: {
+        id: 'map-canvas'
+      }
+    },
+    function(){
+      markers = handler.addMarkers(<%=raw @delatations_markers.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+  </script>
+
   <%= javascript_include_tag 'map' %>
 </body>
 </html>
