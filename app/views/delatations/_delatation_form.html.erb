@@ -1,12 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <% if @delatation.errors.any? %>
+        <div class="alert alert-block">
+            <ul>
+                <% @delatation.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+      <% end %>
       <%= simple_form_for(@delatation, html: { class: "form-horizontal", id: "contactForm" }) do |f| %>
         <fieldset>
           <div class="form-group">
             <%= f.label :category, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <%= f.input_field :category, collection: [["categoria", 1],["categoria 2", 2]], class: "form-control inpt" %>
+              <%= f.input_field :category, prompt: "Selecione a categoria do local", class: "form-control inpt" %>
             </div>
           </div>
 
@@ -34,7 +43,7 @@
           <div class="form-group">
             <%= f.label :shift, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <%= f.input_field :shift, collection: [["categoria", 1],["categoria 2", 2]], class: "form-control inpt" %>
+              <%= f.input_field :shift, prompt: "Selecione um turno", class: "form-control inpt" %>
             </div>
           </div>
           
@@ -46,7 +55,7 @@
           </div>
 
           <div class="form-group" id="btnGroup">
-            <%= f.button :submit, class: "btn btn-default", id: "enviar" %>
+            <%= f.button :submit, 'ENVIAR', class: "btn btn-default", id: "enviar" %>
           </div>  
         </fieldset>
       <% end %>
