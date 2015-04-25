@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422034702) do
+ActiveRecord::Schema.define(version: 20150425162333) do
 
   create_table "delatations", force: true do |t|
     t.integer  "category"
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
-    t.date     "date"
+    t.date     "occurrence_date"
     t.integer  "shift"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
 end
