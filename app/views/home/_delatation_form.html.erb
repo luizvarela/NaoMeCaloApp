@@ -1,81 +1,55 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <form class="form-horizontal" id="contactForm">
+      <%= simple_form_for(@delatation, html: { class: "form-horizontal", id: "contactForm" }) do |f| %>
         <fieldset>
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="Categoria">Categoria</label>
-
+            <%= f.label :category, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <select id="Categoria" name="Categoria" class="form-control inpt">
-                <option value="0">Selecione a categoria do local</option>
-                <option value="1">Estabelecimento Comercial</option>
-                <option value="2">Evento</option>
-                <option value="3">Rua</option>
-              </select>
+              <%= f.input_field :category, collection: [["categoria", 1],["categoria 2", 2]], class: "form-control inpt" %>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="Nome do Local">Nome do Local</label>
-
+            <%= f.label :name, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <input id="Nome do Local" name="Nome do Local" type="text"
-                     placeholder="Dê nome ou detalhes ao local" class="form-control input-md inpt"
-                     required="">
+              <%= f.input_field :name, placeholder: "Dê nome ou detalhes ao local", class: "form-control input-md inpt" %>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="Localização">Localização</label>
-
+            <%= f.label :address, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <input id="Localização" name="Localização" type="text" placeholder="Localização"
-                     class="form-control input-md inpt" required="">
-
+              <%= f.input_field :address, placeholder: "Localização", class: "form-control input-md inpt" %>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="Data do Acontecimento">Data</label>
-
+            <%= f.label :occurrence_date, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <input id="Data do Acontecimento" name="Data" type="date" placeholder="Data"
-                     class="form-control input-md inpt" required="">
-
+              <%= f.input_field :occurrence_date, as: :string, placeholder: "DD/MM/AAAA", class: "form-control inpt" %>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="Turno">Turno</label>
-
+            <%= f.label :shift, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <select id="Turno" name="Turno" class="form-control inpt">
-                <option value="0">Selecione um turno</option>
-                <option value="1">Manhã</option>
-                <option value="2">Tarde</option>
-                <option value="2">Noite</option>
-                <option value="4">Madrugada</option>
-              </select>
+              <%= f.input_field :shift, collection: [["categoria", 1],["categoria 2", 2]], class: "form-control inpt" %>
             </div>
           </div>
-
+          
           <div class="form-group">
-            <label class="col-md-4 control-label lblForm" for="txtArea">Conte o que
-                Aconteceu</label>
-
+            <%= f.label :description, class: "col-md-4 control-label lblForm" %>
             <div class="col-md-8">
-              <textarea class="form-control inpt" id="txtArea"
-                        placeholder="Descreva a situação ou agressor(es)."
-                        name="Conte o que Aconteceu"></textarea>
+              <%= f.input_field :description, placeholder: "Descreva a situação ou agressor(es).", class: "form-control inpt", id: "txtArea" %>
             </div>
           </div>
 
           <div class="form-group" id="btnGroup">
-              <button class="btn btn-default" id="enviar" type="submit">Enviar</button>
-          </div>
+            <%= f.button :submit, class: "btn btn-default", id: "enviar" %>
+          </div>  
         </fieldset>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
