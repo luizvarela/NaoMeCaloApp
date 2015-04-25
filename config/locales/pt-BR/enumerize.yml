@@ -1,0 +1,12 @@
+pt-BR:
+  enumerize:
+    delatation:
+      category:
+        business: 'Estabelecimento comercial'
+        event: 'Evento'
+        street: 'Rua'
+      shift:
+        morning: 'Manhã'
+        afternoon: 'Tarde'
+        night: 'Noite'
+        evening: 'Madrugada'
