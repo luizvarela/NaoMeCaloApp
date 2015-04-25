@@ -1,6 +1,5 @@
 require File.expand_path('../boot', __FILE__)
 
-# Pick the frameworks you want:
 require "active_model/railtie"
 require "active_record/railtie"
 require "action_controller/railtie"
@@ -9,12 +8,23 @@ require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module NaoMeCaloApp
   class Application < Rails::Application
+    config.encoding = "utf-8"
+    config.time_zone = "Brasilia"
+
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    # https://github.com/rails/rails/issues/13159
+    I18n.enforce_available_locales = false
+
+    config.i18n.available_locales = [:"pt-BR", :en]
+    config.i18n.default_locale = :"pt-BR"
+
+    I18n.locale = config.i18n.locale = config.i18n.default_locale
+    
     config.autoload_paths += Dir["#{config.root}/lib"]
     
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
