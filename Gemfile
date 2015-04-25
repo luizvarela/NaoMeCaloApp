@@ -14,6 +14,7 @@ gem 'gmaps4rails'
 gem 'bower-rails'
 gem 'simple_form'
 gem 'rails-i18n'
+gem 'enumerize'
 
 group :development do
   gem 'spring'
