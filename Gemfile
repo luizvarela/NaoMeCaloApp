@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'bower-rails'
+gem 'simple_form'
+gem 'rails-i18n'
 
 group :development do
   gem 'spring'
