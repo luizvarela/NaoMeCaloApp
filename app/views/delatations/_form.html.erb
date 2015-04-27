@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <% if @delatation.errors.any? %>
+        <div class="alert alert-block">
+            <ul>
+                <% @delatation.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+      <% end %>
+      <%= simple_form_for(@delatation, html: { class: "form-horizontal", id: "contactForm" }) do |f| %>
+        <fieldset>
+          <div class="form-group">
+            <%= f.label :category, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :category, prompt: "Selecione a categoria do local", class: "form-control inpt" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :name, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :name, placeholder: "Dê nome ou detalhes ao local", class: "form-control input-md inpt" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :address, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :address, placeholder: "Localização", class: "form-control input-md inpt" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :occurrence_date, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :occurrence_date, as: :string, placeholder: "DD/MM/AAAA", class: "form-control inpt" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :shift, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :shift, prompt: "Selecione um turno", class: "form-control inpt" %>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :description, class: "col-md-4 control-label lblForm" %>
+            <div class="col-md-8">
+              <%= f.input_field :description, placeholder: "Descreva a situação ou agressor(es).", class: "form-control inpt", id: "txtArea" %>
+            </div>
+          </div>
+
+          <div class="form-group" id="btnGroup">
+            <%= f.button :submit, 'ENVIAR', class: "btn btn-default", id: "enviar" %>
+          </div>  
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
