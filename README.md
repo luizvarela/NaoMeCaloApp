@@ -19,6 +19,7 @@ Entrar na pasta do projeto:
 
     $ cd NaoMeCaloApp
     $ bundle install
+    $ bower install
     $ bundle exec rake db:migrate
     $ rails s
 
